@@ -239,16 +239,7 @@ void processor::processRandom()
         cycles = distrCycle(randGenerator);
         address = distrAddr(randGenerator);
 
-        sc_time delay;
-
-        if (sc_time_stamp() <= cycles * cycleTime)
-        {
-            delay = cycles * cycleTime - sc_time_stamp();
-        }
-        else
-        {
-            delay = SC_ZERO_TIME;
-        }
+        sc_time delay = cycles * cycleTime;
 
         trans.set_address(address);
         iSocket->b_transport(trans, delay);
