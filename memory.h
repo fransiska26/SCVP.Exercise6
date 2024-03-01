@@ -24,7 +24,7 @@ class memory : sc_module, tlm::tlm_fw_transport_if<>
 
     void b_transport(tlm::tlm_generic_payload &trans, sc_time &delay)
     {
-        if (trans.get_address() >= 1024)
+        if (trans.get_address() > 512)
         {
              trans.set_response_status( tlm::TLM_ADDRESS_ERROR_RESPONSE );
              return;
