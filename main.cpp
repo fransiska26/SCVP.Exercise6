@@ -21,19 +21,19 @@ int sc_main (int, char **)
     bus0.iSocket[0].bind(memory0.tSocket);
     bus0.iSocket[1].bind(memory1.tSocket);
 
-    std::cout << std::endl << "Name "
-              << std::setfill(' ') << std::setw(10)
-              << "Time" << " "
-              << std::setfill(' ') << std::setw(5)
-              << "CMD" << "   "
-              << std::setfill(' ') << std::setw(8)
-              << "Address"
-              << "   " << std::hex
-              << std::setfill(' ') << std::setw(8)
-              << "Data"
-              << " " << std::endl
-              << "-------------------------------------------"
-              << std::endl;
+    // std::cout << std::endl << "Name "
+    //           << std::setfill(' ') << std::setw(10)
+    //           << "Time" << " "
+    //           << std::setfill(' ') << std::setw(5)
+    //           << "CMD" << "   "
+    //           << std::setfill(' ') << std::setw(8)
+    //           << "Address"
+    //           << "   " << std::hex
+    //           << std::setfill(' ') << std::setw(8)
+    //           << "Data"
+    //           << " " << std::endl
+    //           << "-------------------------------------------"
+    //           << std::endl;
 
     sc_start();
 
